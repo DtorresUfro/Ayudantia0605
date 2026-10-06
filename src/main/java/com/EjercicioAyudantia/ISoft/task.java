@@ -7,12 +7,12 @@ public class task {
     private String fechaLimite;
     private boolean completada;
 
-    public task(int id, String titulo, String prioridad, String fechaLimite, boolean completada) {
+    public task(int id, String titulo, String prioridad, String fechaLimite) {
         this.id = id;
         this.titulo = titulo;
         this.prioridad = prioridad;
         this.fechaLimite = fechaLimite;
-        this.completada = completada;
+        this.completada = false;
     }
 
     public int getId() {return id;}
