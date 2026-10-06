@@ -1,15 +1,13 @@
 package com.EjercicioAyudantia.ISoft;
 
-import java.util.Date;
-
 public class task {
     private int id;
     private String titulo;
-    private Prioridad prioridad;
-    private Date fechaLimite;
+    private String prioridad;
+    private String fechaLimite;
     private boolean completada;
 
-    public task(int id, String titulo, Prioridad prioridad, Date fechaLimite, boolean completada) {
+    public task(int id, String titulo, String prioridad, String fechaLimite, boolean completada) {
         this.id = id;
         this.titulo = titulo;
         this.prioridad = prioridad;
@@ -23,11 +21,11 @@ public class task {
     public String getTitulo() {return titulo;}
     public void setTitulo(String titulo) {this.titulo = titulo;}
 
-    public Prioridad getPrioridad() {return prioridad;}
-    public void setPrioridad(Prioridad prioridad) {this.prioridad = prioridad;}
+    public String getPrioridad() {return prioridad;}
+    public void setPrioridad(String prioridad) {this.prioridad = prioridad;}
 
-    public Date getFechaLimite() {return fechaLimite;}
-    public void setFechaLimite(Date fechaLimite) {this.fechaLimite = fechaLimite;}
+    public String getFechaLimite() {return fechaLimite;}
+    public void setFechaLimite(String fechaLimite) {this.fechaLimite = fechaLimite;}
 
     public boolean isCompletada() {return completada;}
     public void setCompletada(boolean completada) {this.completada = completada;}
