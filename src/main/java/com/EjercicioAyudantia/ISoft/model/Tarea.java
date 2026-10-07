@@ -1,13 +1,13 @@
-package com.EjercicioAyudantia.ISoft;
+package com.EjercicioAyudantia.ISoft.model;
 
-public class task {
+public class Tarea {
     private int id;
     private String titulo;
     private String prioridad;
     private String fechaLimite;
     private boolean completada;
 
-    public task(int id, String titulo, String prioridad, String fechaLimite) {
+    public Tarea(int id, String titulo, String prioridad, String fechaLimite) {
         this.id = id;
         this.titulo = titulo;
         this.prioridad = prioridad;
@@ -39,5 +39,4 @@ public class task {
                 ", fechaLimite=" + fechaLimite +
                 ", completada=" + completada +
                 '}';
-    }
-}
+    }}
