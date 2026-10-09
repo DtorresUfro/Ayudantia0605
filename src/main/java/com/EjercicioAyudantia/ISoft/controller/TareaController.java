@@ -16,4 +16,12 @@ public class TareaController {
     public ResponseEntity<Tarea> crear(@RequestBody CrearTareaRequest request) {
         Tarea creada = repository.crear(request.titulo(), request.prioridad(), request.fechaLimite());
         return ResponseEntity.status(HttpStatus.CREATED).body(creada);}
+
+    @PatchMapping("/{id}/complete")
+    public ResponseEntity<Tarea> completar(@PathVariable("id") long id) {
+        return repository.buscarPorId(id)
+                .map(tarea -> {
+                    tarea.setCompletada(true);
+                    return ResponseEntity.ok(tarea);})
+                .orElseGet(() -> ResponseEntity.notFound().build());}
 }
