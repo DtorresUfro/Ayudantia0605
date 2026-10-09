@@ -1,13 +1,13 @@
 package com.EjercicioAyudantia.ISoft.model;
 
 public class Tarea {
-    private int id;
+    private long id;
     private String titulo;
     private String prioridad;
     private String fechaLimite;
     private boolean completada;
 
-    public Tarea(int id, String titulo, String prioridad, String fechaLimite) {
+    public Tarea(long id, String titulo, String prioridad, String fechaLimite) {
         this.id = id;
         this.titulo = titulo;
         this.prioridad = prioridad;
@@ -15,8 +15,8 @@ public class Tarea {
         this.completada = false;
     }
 
-    public int getId() {return id;}
-    public void setId(int id) {this.id = id;}
+    public long getId() {return id;}
+    public void setId(long id) {this.id = id;}
 
     public String getTitulo() {return titulo;}
     public void setTitulo(String titulo) {this.titulo = titulo;}
