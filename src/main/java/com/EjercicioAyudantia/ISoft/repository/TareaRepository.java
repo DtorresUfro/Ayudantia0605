@@ -3,6 +3,7 @@ import com.EjercicioAyudantia.ISoft.model.Tarea;
 import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
@@ -17,5 +18,11 @@ public class TareaRepository {
         Tarea tarea = new Tarea(secuencia.incrementAndGet(), titulo, prioridad, fechaLimite);
         agregar(tarea);
         return tarea;
+    }
+
+    public Optional<Tarea> buscarPorId(long id) {
+        return tareas.stream()
+                .filter(tarea -> tarea.getId() == id)
+                .findFirst();
     }
 }
